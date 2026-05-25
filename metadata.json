@@ -1,0 +1,6 @@
+{
+  "name": "Rehab Institution Platform",
+  "description": "Comprehensive secure web application for physical therapy, occupational therapy, and addiction recovery workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
