@@ -29,12 +29,10 @@ export default function App() {
   }
 
   return (
-    <div className="flex h-screen bg-slate-50 overflow-hidden text-slate-900 border border-slate-200" style={{
-      backgroundImage: `radial-gradient(at top left, rgba(239, 246, 255, 1) 0%, transparent 60%), radial-gradient(at bottom right, rgba(254, 243, 199, 0.4) 0%, transparent 50%)`
-    }}>
+    <div className="flex h-screen bg-clinical-50 overflow-hidden text-clinical-950 border border-clinical-100">
       <Sidebar currentView={currentView} onViewChange={setCurrentView} />
       
-      <main className="flex-1 overflow-y-auto w-full p-8 flex flex-col">
+      <main className="flex-1 overflow-y-auto w-full p-8 flex flex-col space-y-8">
         {currentView === 'dashboard' && <DashboardView onViewChange={setCurrentView} />}
         {currentView === 'architecture' && <ArchitectureView />}
         {currentView === 'database' && <DatabaseView />}

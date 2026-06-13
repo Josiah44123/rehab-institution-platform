@@ -1,1 +1,50 @@
 @import "tailwindcss";
+
+@theme {
+  --color-clinical-950: #062d2d;
+  --color-clinical-900: #0a4444;
+  --color-clinical-800: #125e5e;
+  --color-clinical-700: #1a7777;
+  --color-clinical-600: #259090;
+  --color-clinical-500: #32a9a9;
+  --color-clinical-400: #4ec0c0;
+  --color-clinical-300: #76d3d3;
+  --color-clinical-200: #a7e4e4;
+  --color-clinical-100: #d5f2f2;
+  --color-clinical-50: #edfafb;
+
+  --color-warm-950: #332111;
+  --color-warm-900: #54371d;
+  --color-warm-800: #754d2a;
+  --color-warm-700: #966337;
+  --color-warm-600: #b87944;
+  --color-warm-500: #d18d53;
+  --color-warm-400: #dfa778;
+  --color-warm-300: #edc19e;
+  --color-warm-200: #f6dbc3;
+  --color-warm-100: #fbf0e6;
+  --color-warm-50: #fff9f4;
+}
+
+@layer base {
+  body {
+    @apply bg-clinical-50 text-clinical-950;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+.custom-card {
+  @apply bg-white border border-clinical-100 shadow-[0_2px_15px_-3px_rgba(6,45,45,0.05),0_4px_6px_-2px_rgba(6,45,45,0.03)] rounded-lg transition-all duration-300;
+}
+
+.custom-card:hover {
+  @apply shadow-[0_10px_25px_-5px_rgba(6,45,45,0.08),0_8px_10px_-6px_rgba(6,45,45,0.05)] border-clinical-200;
+}
+
+.btn-primary {
+  @apply bg-clinical-900 text-white px-5 py-2.5 rounded-md font-semibold text-sm transition-all hover:bg-clinical-800 active:scale-95 shadow-sm;
+}
+
+.btn-secondary {
+  @apply bg-white text-clinical-900 border border-clinical-200 px-5 py-2.5 rounded-md font-semibold text-sm transition-all hover:bg-clinical-50 active:scale-95;
+}
